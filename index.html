@@ -10,8 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-updates.css">
+  <link rel="stylesheet" href="css/print.css">
 </head>
-<body>
+<body class="home-page">
 
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -49,11 +51,14 @@
       <div class="button-row">
         <a class="btn btn-primary" href="resume.html">Explore my resume <span aria-hidden="true">↗</span></a>
         <a class="btn btn-secondary" href="contact.html">Get in touch</a>
+        <button class="btn btn-secondary no-print" type="button" onclick="window.print()">Print / Save as PDF <span aria-hidden="true">↓</span></button>
       </div>
     </div>
-    <div class="hero-art" aria-label="Decorative portfolio graphic">
-      <div class="orb"></div>
-      <div class="orb-label">KA</div>
+    <div class="hero-art" aria-label="Profile photograph">
+      <div class="profile-photo-glow" aria-hidden="true"></div>
+      <div class="profile-photo-frame">
+        <img class="hero-profile-photo" src="assets/profile.jpg" alt="Professional profile portrait of Kartik Alur">
+      </div>
       <div class="float-chip chip-one">AI · Learning · Innovation</div>
       <div class="float-chip chip-two">Curious by nature ✦</div>
     </div>

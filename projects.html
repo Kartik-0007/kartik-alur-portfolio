@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Projects portfolio page for Kartik Ashok Alur. Project entries will be added when completed and confirmed.">
+  <meta name="description" content="Projects portfolio of Kartik Ashok Alur, including an NLP-based online harassment detection project currently in progress.">
   <meta name="author" content="Kartik Ashok Alur">
   <meta name="theme-color" content="#090b16">
   <title>Projects | Kartik Ashok Alur</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site-updates.css">
+  <link rel="stylesheet" href="css/print.css">
 </head>
-<body>
+<body class="projects-page">
 
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -38,21 +40,43 @@
 <section class="page-hero">
   <div class="container">
     <span class="eyebrow"><span class="eyebrow-dot"></span> Work in progress</span>
-    <h1>Projects <span class="gradient-text">Portfolio.</span></h1>
+    <h1>Projects <span class="gradient-text">Portfolio</span></h1>
     <p>A space for completed projects, practical experiments and technical work.</p>
+    <div class="button-row no-print" style="margin-top:22px">
+      <button class="btn btn-primary" type="button" onclick="window.print()">Print / Save as PDF <span aria-hidden="true">↓</span></button>
+    </div>
   </div>
 </section>
 <section class="content-section">
   <div class="container">
-    <div class="content-card empty-state reveal">
-      <div class="empty-icon" aria-hidden="true">✧</div>
-      <h2>Projects will appear here.</h2>
-      <p>
-        There are no completed projects published on this portfolio yet. This section is intentionally
-        kept open so that future projects can be added with accurate descriptions, technologies and links.
+    <article class="content-card project-card reveal">
+      <div class="project-heading">
+        <div>
+          <div class="meta">ARTIFICIAL INTELLIGENCE · NLP</div>
+          <h2>Online Harassment Detection System</h2>
+        </div>
+        <span class="project-status"><span class="project-status-dot" aria-hidden="true"></span> In Progress</span>
+      </div>
+      <p class="project-description">
+        An NLP-based project aimed at identifying potentially threatening, abusive, insulting,
+        or harassing messages in online communication and flagging them for human review or moderation.
       </p>
-      <a class="btn btn-primary" href="contact.html">Connect with me</a>
-    </div>
+      <div class="project-details-grid">
+        <div>
+          <h3>Project Objective</h3>
+          <p>Explore a system that can analyze text, recognize harmful language patterns, and support safer online interactions through moderation assistance.</p>
+        </div>
+        <div>
+          <h3>Planned Development</h3>
+          <ul class="project-list">
+            <li>Prepare and clean a suitable labelled text dataset.</li>
+            <li>Explore text representation and classification approaches.</li>
+            <li>Evaluate the detection workflow and flag potentially harmful messages for review.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="project-note">This project is currently in progress. Implementation details and results will be updated as development continues.</p>
+    </article>
   </div>
 </section>
 

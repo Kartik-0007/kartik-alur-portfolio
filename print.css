@@ -1,0 +1,196 @@
+/* Colour-preserving, compact A4 print layout for all five website pages. */
+@page { size: A4 portrait; margin: 8mm 9mm; }
+
+@media print {
+  :root, html, body {
+    color-scheme: dark !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  html {
+    background: #090b16 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: linear-gradient(135deg, #090b16 0%, #101426 58%, #0c1a2b 100%) !important;
+    color: #f5f6ff !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 9pt !important;
+    line-height: 1.28 !important;
+  }
+  body::before { display: none !important; }
+  .site-header, .site-footer, .skip-link, .back-top, .no-print, .print-hide {
+    display: none !important;
+  }
+  main {
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .hero, .page-hero {
+    display: block !important;
+    padding: 5mm 0 3mm !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+  .hero-grid {
+    display: grid !important;
+    grid-template-columns: 1.25fr .75fr !important;
+    align-items: center !important;
+    gap: 6mm !important;
+  }
+  .hero h1, .page-hero h1 {
+    margin: 3mm 0 2mm !important;
+    color: #f5f6ff !important;
+    font-size: 25pt !important;
+    line-height: 1.05 !important;
+  }
+  .gradient-text {
+    color: #64d7ed !important;
+    background: none !important;
+    -webkit-text-fill-color: #64d7ed !important;
+  }
+  .eyebrow {
+    padding: 1.5mm 3mm !important;
+    background: #1b2240 !important;
+    border: 1px solid #47547d !important;
+    color: #c8d2f3 !important;
+    font-size: 7pt !important;
+  }
+  .hero-role, .hero-copy, .page-hero p, .section-heading p {
+    color: #c1c9e2 !important;
+    font-size: 8.5pt !important;
+  }
+  .hero-copy { margin: 3mm 0 !important; }
+  .hero-art { min-height: 0 !important; }
+  .orb { display: none !important; }
+  .profile-photo-glow { display: block !important; width: 37mm !important; opacity: .65 !important; filter: blur(7px) !important; }
+  .profile-photo-frame { width: 37mm !important; padding: 1mm !important; box-shadow: none !important; }
+  .hero-profile-photo { border-width: 1mm !important; }
+  .float-chip { padding: 1.2mm 2mm !important; font-size: 6.5pt !important; box-shadow: none !important; }
+  .section, .content-section, .content-section + .content-section {
+    margin: 0 !important;
+    padding: 3mm 0 !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+  .section-heading { margin: 0 0 3mm !important; gap: 3mm !important; }
+  .section-heading h2 { color: #f5f6ff !important; font-size: 15pt !important; }
+  .card-grid { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 3mm !important; }
+  .two-col { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 4mm !important; }
+  .contact-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 4mm !important; }
+  .card, .content-card, .project-card {
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 3.5mm !important;
+    border: 1px solid #39476e !important;
+    border-radius: 3mm !important;
+    background: #14192e !important;
+    color: #f5f6ff !important;
+    box-shadow: none !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  .card h3, .content-card h2, .content-card h3, .project-details-grid h3 {
+    color: #f5f6ff !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    letter-spacing: 0 !important;
+  }
+  .content-card h2 {
+    margin: 0 0 2mm !important;
+    padding: 0 0 1.5mm !important;
+    border-bottom: 1px solid #58658e !important;
+    font-size: 11pt !important;
+  }
+  .content-card h3, .project-details-grid h3 { margin: 0 0 1mm !important; font-size: 9pt !important; }
+  .content-card p, .content-card li, .content-card dd, .content-card dt,
+  .card p, .project-description, .project-details-grid p, .project-list,
+  .project-note, .callout p {
+    color: #c5cce3 !important;
+    font-size: 8.2pt !important;
+    line-height: 1.25 !important;
+  }
+  .content-card p, .content-card li { margin-top: 0 !important; margin-bottom: 1mm !important; }
+  .tag-list { display: flex !important; flex-wrap: wrap !important; gap: 1.2mm !important; }
+  .tag {
+    display: inline-block !important;
+    padding: 1mm 2mm !important;
+    margin: 0 !important;
+    border: 1px solid #46547b !important;
+    border-radius: 999px !important;
+    background: #1b2240 !important;
+    color: #dce5ff !important;
+    font-size: 7.3pt !important;
+  }
+  .callout {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4mm !important;
+    padding: 4mm !important;
+    border: 1px solid #4c5b89 !important;
+    border-radius: 3mm !important;
+    background: linear-gradient(110deg, #20244a, #123347) !important;
+  }
+  .callout h2 { color: #f5f6ff !important; font-size: 14pt !important; }
+  .btn { display: none !important; }
+  .content-section .container { gap: 3mm !important; }
+  .education-item { display: block !important; padding: 0 !important; }
+  .timeline-mark { display: none !important; }
+  .education-item .meta { float: right !important; color: #70d9eb !important; font-size: 8pt !important; }
+  .education-item h3 { display: inline !important; }
+  .detail-list { display: grid !important; grid-template-columns: 22mm minmax(0,1fr) !important; gap: 1mm 2mm !important; margin: 0 !important; }
+  .detail-list dt { color: #74d9ec !important; font-weight: 700 !important; }
+  .detail-list dd { min-width: 0 !important; margin: 0 !important; color: #d6dcf1 !important; overflow-wrap: anywhere !important; }
+  .cert-list { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 2mm 4mm !important; }
+  .cert-item { break-inside: avoid !important; page-break-inside: avoid !important; }
+  .cert-item h3, .cert-item p { color: #d6dcf1 !important; }
+  .cert-check { color: #75e0b2 !important; }
+  .strength-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 1.5mm 3mm !important; }
+  .strength { padding: 1mm 2mm !important; border: 1px solid #3d4a70 !important; border-radius: 2mm !important; background: #1b2240 !important; color: #dce5ff !important; font-size: 7.5pt !important; }
+  .declaration { border-left: 2px solid #69d7e9 !important; padding-left: 2mm !important; color: #d6dcf1 !important; }
+  .print-resume-header, .print-biodata-header {
+    display: block !important;
+    margin: 0 0 3mm !important;
+    padding: 0 0 2mm !important;
+    border-bottom: 1px solid #607099 !important;
+    text-align: center !important;
+  }
+  .print-resume-header h1, .print-biodata-header h1 {
+    margin: 0 0 1mm !important;
+    color: #f5f6ff !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 20pt !important;
+    letter-spacing: 0 !important;
+  }
+  .print-resume-header p, .print-biodata-header p { margin: 0.5mm 0 !important; color: #c8d2ed !important; font-size: 7.5pt !important; }
+  body.resume-page .page-hero, body.biodata-page .page-hero { display: none !important; }
+  body.resume-page .print-resume-header, body.biodata-page .print-biodata-header { display: block !important; }
+  body.biodata-page .content-card { padding: 3mm !important; }
+  body.biodata-page .content-card h2 { font-size: 10pt !important; }
+  body.biodata-page .detail-list { grid-template-columns: 23mm minmax(0,1fr) !important; }
+  body.projects-page .project-heading { display: flex !important; align-items: flex-start !important; justify-content: space-between !important; gap: 4mm !important; }
+  body.projects-page .project-status { padding: 1mm 2mm !important; border: 1px solid #39866b !important; background: #17382f !important; color: #8ae4bc !important; font-size: 7.5pt !important; }
+  body.projects-page .project-status-dot { background: #8ae4bc !important; }
+  body.projects-page .project-details-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 4mm !important; margin-top: 3mm !important; }
+  body.projects-page .project-note { margin-top: 3mm !important; padding: 2mm 3mm !important; border-left: 2px solid #64d7ed !important; background: #142b3b !important; }
+  body.contact-page .contact-grid { display: block !important; }
+  body.contact-page .contact-grid .content-card:nth-child(2) { display: none !important; }
+  body.contact-page .contact-method { display: flex !important; align-items: center !important; gap: 3mm !important; margin: 2mm 0 !important; }
+  body.contact-page .contact-method .card-icon { margin: 0 !important; }
+  .reveal, .reveal.is-visible { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .hero, .section, .content-section { break-inside: auto !important; page-break-inside: auto !important; }
+  p, li { orphans: 2 !important; widows: 2 !important; }
+  a { color: #7edcf0 !important; text-decoration: none !important; overflow-wrap: anywhere !important; }
+  * { text-shadow: none !important; }
+}
